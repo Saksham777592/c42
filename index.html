@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>saksham's javascript</title>
+<script src="main.js"></script>
+
+</head>
+<body>
+<script>
+            var text="goodmorning";
+            document.write(text);
+            document.write("<br>");
+
+            //javescript objects have a collection of values
+            //properties
+            //firstname, lastname, age, eyecolor
+
+            //value
+            //john, doe, 50, blue
+
+            //first method of creation-object literal
+            var myHonda={firstname:'john', lastname:' doe', age:50, eyecolor:'blue'}
+            document.write(myHonda.age);
+            document.write("<br>");
+
+            //constructor function-second method
+            function Car(make, model, year) {
+                this.make=make;
+                this.model=model;
+                this.year=year   
+            }
+            
+            var mycar=new Car('Eagle', 'Talon', 1993);
+            document.write(mycar.make);
+            document.write("<br>");
+
+            //third method-using new Object()
+            var car=new Object();
+            
+            //prototype
+            function School(name, rollNumber) {
+                this.name=name;
+                this.rollNumber=rollNumber;  
+            }
+            School.prototype.city="Chandigarh";
+             
+            var student=new School('saksham', 1200034);
+            var student1=new School('rahul', 203949);
+
+            document.write(student.name);
+            document.write(student.city);
+            document.write("<br>");
+
+            document.write(student1.name);
+            document.write(student1.city);
+            document.write("<br>");
+            //you give the property(name,rollnumber)-->function constructor
+            //you give the values to-->object
+
+            //for-in loop
+            var person = {fname:"John", lname:"Doe", age:25};
+            var text = ""; 
+            var x; 
+            for(x in person) { 
+               text = person[x] + " ";
+               document.write(text);
+               document.write("<br>");
+               document.write("<br>");
+            }
+
+            //for-of loop
+            let scores = [80, 90, 70];
+            var score;
+            for(score of scores) { 
+                score = score + 5; 
+                document.write(score);
+                document.write("<br>");
+            }
+            
+            // program using switch statement
+            let a = 2;
+            switch(a) {
+                case 1: a = 'one'; 
+                break;
+                case 2: a = 'two'; 
+                break;
+                default: a = 'not found';
+                break;
+            } 
+            console.log(a);
+
+            
+</script>
+</body>
+</html>
